@@ -43,7 +43,6 @@ setup(
         'django-crispy-forms>=1.7.1',
         'django-tag-parser>=3.1',
         'django-contrib-comments>=1.9',
-        'python-akismet>=0.4.1',  # Python 3 port, replaces Python 2-only "akismet" library.
     ],
     requires=[
         'Django (>=1.11)',
