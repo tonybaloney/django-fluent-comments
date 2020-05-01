@@ -4,12 +4,14 @@ import logging
 
 try:
     from akismet import SpamStatus
+    from fluent_comments.akismet import akismet_check
 except ImportError:
     SpamStatus = None
+    akismet_check = None
+
 from django_comments.moderation import moderator, CommentModerator
 
 from fluent_comments import appsettings
-from fluent_comments.akismet import akismet_check
 from fluent_comments.email import send_comment_posted
 from fluent_comments.utils import split_words
 
