@@ -2,7 +2,10 @@ from __future__ import absolute_import
 
 import logging
 
-from akismet import SpamStatus
+try:
+    from akismet import SpamStatus
+except ImportError:
+    SpamStatus = None
 from django_comments.moderation import moderator, CommentModerator
 
 from fluent_comments import appsettings
